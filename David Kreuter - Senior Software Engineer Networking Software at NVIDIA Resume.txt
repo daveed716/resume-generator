@@ -1,0 +1,72 @@
+David Kreuter
+108 West Cherbourg Dr, Cheektowaga, NY  |  +1 716-444-9433  |  davidckreuter@gmail.com
+
+Senior Infrastructure & Networking Engineer | High-Performance Systems | Automation at Scale
+
+Seasoned technical professional with 10+ years of experience in engineering high-performance infrastructure and networking solutions across enterprise environments. Proven expertise in network architecture, performance tuning, embedded systems troubleshooting, and large-scale automation—including building a global provisioning framework that manages 20,000+ virtual machines through integrated API-driven workflows. Possesses a deep background in customer-facing engineering, cross-functional collaboration, and mentoring technical teams. Skilled at diagnosing complex hardware and software interactions, from NUMA topology optimization to firewall policy automation, with a track record of independently driving projects from concept to delivery in fast-paced, high-stakes environments.
+
+WORK EXPERIENCE
+============================================================
+
+M&T Bank    03/2019 - Present
+Automation Engineer (formerly Systems Engineer)
+----------------------------------------
+  * Architectural Scale: Engineered a global server provisioning framework that deploys and manages 20,000+ virtual machines; integrated Rubrik and VMware APIs to automate compute placement and backup orchestration, ensuring 100% RTO/RPO compliance and optimal resource allocation at build time.
+  * Infrastructure Resilience: Engineered and maintain a highly resilient infrastructure spanning three identical, geo-redundant datacenters, ensuring maximum uptime and disaster-recovery readiness—directly analogous to hyperscale AI factory reliability requirements.
+  * Network Security Automation: Automated Check Point firewall rule generation and DMZ provisioning; integrated security policy updates into the server build cycle to ensure day-zero network isolation and a hardened security posture across complex, multi-zone network topologies.
+  * Platform Engineering & Middleware: Designed and developed a custom Python orchestration application that serves as middleware between ServiceNow and the Ansible Automation Platform; implemented advanced retry logic, auto-remediation of deployment failures, and a pub/sub queue model for high-volume, low-latency scaling.
+  * Hybrid Cloud & GitOps: Architected GitOps-driven CI/CD pipelines using Terraform to automate the deployment of virtual machines to Azure; implemented a pull-request-based workflow that standardizes infrastructure changes through automated plan/apply cycles.
+  * Cloud Abstraction & Redesign: Refactored legacy on-premise automation workflows to be fully cloud-agnostic, enabling seamless deployment to Azure; designed abstraction logic that is transparent to end users, maintaining a consistent interface while handling underlying infrastructure complexity.
+  * End-to-End Hardening & Provisioning: Developed a zero-touch build workflow that delivers fully patched and hardened Linux (Ansible) and Windows (GPO) servers; automated agent installation, drive formatting, and optional hardened SQL deployments at scale.
+  * Technical Leadership: Serve as a primary mentor for the Technology Development Program (TDP), setting enterprise-wide standards for naming conventions, Git branching strategies, and unit testing for infrastructure code—driving cross-team technical alignment.
+  * Operational Efficiency: Developed an intelligent IP provisioning engine through InfoBlox API integrations, eliminating 1,000+ annual engineer hours and resolving a multi-year infrastructure bottleneck by applying deep networking protocol expertise.
+  * Database as a Service (DBaaS): Collaborated with Database Engineering to architect a high-performance on-premise SQL cluster, enabling a unified DBaaS offering that consolidates fragmented legacy databases and streamlines application delivery.
+  * Cost Optimization: Orchestrated the migration of 850 branch file servers within a strict three-month window using custom PowerShell automation, avoiding $400,000 in extended licensing fees.
+  * Risk Mitigation: Authored Active Directory lifecycle scripts with built-in 'Read-Only' dry-run modes; implemented Least Privilege permissions and robust rollback protocols for stale object cleanup.
+
+
+OTG Management    07/2013 - 02/2019
+Lead Network Engineer
+----------------------------------------
+  * Performance Engineering: Diagnosed and resolved a mission-critical server hang by identifying a NUMA architecture mismatch; realigned vCPU/memory topology to eliminate cross-node latency and restore system stability—demonstrating deep hardware-level troubleshooting skills.
+  * Infrastructure Resilience: Architected a highly redundant DNS solution that significantly reduced network outages and optimized global traffic performance across distributed infrastructure.
+  * Cloud Connectivity: Established secure, encrypted VPN tunnels to bridge on-premise networks with cloud resources, ensuring seamless hybrid-cloud operations and low-latency connectivity.
+  * Security Architecture: Engineered a secure reverse proxy solution that protects sensitive internal infrastructure, enabling customer online ordering while mitigating external threat vectors.
+
+Network Engineer
+----------------------------------------
+  * Network Administration: Managed complex firewall rules and switch ACLs for a massive distributed network spanning 12 airports and three satellite offices, requiring deep knowledge of L2-L4 networking protocols.
+  * Proactive Monitoring: Developed service-aware alerting frameworks for business-critical systems, reducing mean time to resolution (MTTR) through proactive incident detection and performance analysis.
+  * Cybersecurity Governance: Directed enterprise-wide vulnerability scanning and remediation efforts for internal and external systems to maintain a hardened security posture.
+  * Enterprise Mobility: Onboarded and managed 15,000 iPads via Meraki MDM, implementing automated security protocols including geo-fencing, remote-wipe triggers, and custom application deployment.
+
+Systems Administrator
+----------------------------------------
+  * Operational Visibility: Modernized infrastructure monitoring by designing custom Grafana dashboards to visualize real-time performance metrics across networked systems.
+  * Disaster Recovery: Spearheaded the deployment of Datto backup and disaster-recovery appliances to ensure 100% business continuity for critical operations.
+
+SKILLS
+============================================================
+  Networking: High Availability, BGP, DNS, VPN, VRRP, F5 Load Balancing, Intrusion Detection, Vulnerability Scanning, Meraki MDM
+  Infrastructure: NUMA Tuning, VMware vSphere, OS Hardening (CIS/STIG), Check Point Firewalls, Infrastructure as Code (IaC), Azure Cloud Services, Nutanix AHV, Rubrik, Active Directory, DBaaS
+  Languages: Python, Bash, PowerShell, SQL, YAML, Javascript, PHP
+  Automation/Orchestration: Ansible Automation Platform, REST API, CI/CD Pipelines, Terraform, GitOps, Middleware Development, Gitlab, Grafana, GraphQL, ServiceNow, Unit Testing
+
+EDUCATION
+============================================================
+  Bachelor Of Science in Computer Information Systems    12/2012
+  SUNY Fredonia
+
+CERTIFICATIONS
+============================================================
+  Certified Meraki Network Operator
+  Meraki
+
+VOLUNTEERING & LEADERSHIP
+============================================================
+  Habitat For Humanity -- 07/2025 - Present
+  Volunteer
+  Tifft Nature Preserve -- 01/2025 - Present
+  Volunteer
+  716 Paws -- 01/2022 - Present
+  Thermal drone pilot for search and rescue missions.

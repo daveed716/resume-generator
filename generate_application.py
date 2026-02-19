@@ -15,7 +15,7 @@ from openai import OpenAI
 from docx import Document
 from docx.shared import Pt, Inches, RGBColor
 from docx.enum.text import WD_ALIGN_PARAGRAPH
-from fpdf import FPDF
+from fpdf import FPDF, XPos, YPos
 
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -545,7 +545,7 @@ class ResumePDF(FPDF):
     def section_header(self, text):
         self.set_font("Helvetica", "B", 11)
         self.set_text_color(*TEAL_HEX)
-        self.cell(0, 7, text, ln=1)
+        self.cell(0, 7, text, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
         self.set_draw_color(*TEAL_HEX)
         self.set_line_width(0.3)
         y = self.get_y()
@@ -593,17 +593,18 @@ class ResumePDF(FPDF):
                 bold_chars_left = bold_len - chars_rendered
                 if bold_chars_left >= len(line):
                     self.set_font("Helvetica", "B", 8.5)
-                    self.cell(wrap_w, lh, line, ln=1)
+                    self.cell(wrap_w, lh, line, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
                 else:
                     bold_part = line[:bold_chars_left]
                     normal_part = line[bold_chars_left:]
                     self.set_font("Helvetica", "B", 8.5)
                     self.cell(self.get_string_width(bold_part), lh, bold_part)
                     self.set_font("Helvetica", "", 8.5)
-                    self.cell(wrap_w - self.get_string_width(bold_part), lh, normal_part, ln=1)
+                    self.cell(wrap_w - self.get_string_width(bold_part), lh, normal_part,
+                              new_x=XPos.LMARGIN, new_y=YPos.NEXT)
             else:
                 self.set_font("Helvetica", "", 8.5)
-                self.cell(wrap_w, lh, line, ln=1)
+                self.cell(wrap_w, lh, line, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
             chars_rendered += len(line) + 1
 
 
@@ -616,23 +617,24 @@ def write_resume_pdf(data: dict, exp_data: dict, path: str):
     # Name
     pdf.set_font("Helvetica", "B", 20)
     pdf.set_text_color(*TEAL_HEX)
-    pdf.cell(0, 10, c["name"], ln=1, align="C")
+    pdf.cell(0, 10, c["name"], align="C", new_x=XPos.LMARGIN, new_y=YPos.NEXT)
 
     # Contact
     pdf.set_font("Helvetica", "", 9)
     pdf.set_text_color(0, 0, 0)
     contact = f"{c['address']}  |  {c['phone']}  |  {c['email']}"
-    pdf.cell(0, 5, contact, ln=1, align="C")
+    pdf.cell(0, 5, contact, align="C", new_x=XPos.LMARGIN, new_y=YPos.NEXT)
 
     # Headline
     pdf.set_font("Helvetica", "B", 11)
     pdf.set_text_color(0, 0, 0)
-    pdf.cell(0, 7, _pdf_safe(data["headline"]), ln=1, align="C")
+    pdf.cell(0, 7, _pdf_safe(data["headline"]), align="C", new_x=XPos.LMARGIN, new_y=YPos.NEXT)
     pdf.ln(2)
 
     # Summary
     pdf.set_font("Helvetica", "", 9)
-    pdf.multi_cell(0, 4, _pdf_safe(data["summary"]), align="L")
+    pdf.set_x(pdf.l_margin)
+    pdf.multi_cell(pdf.w - pdf.l_margin - pdf.r_margin, 4, _pdf_safe(data["summary"]), align="L")
     pdf.ln(3)
 
     # Experience
@@ -646,10 +648,10 @@ def write_resume_pdf(data: dict, exp_data: dict, path: str):
                 dates = _pdf_safe(job["dates"])
                 usable = pdf.w - pdf.l_margin - pdf.r_margin
                 pdf.cell(usable / 2, 6, company)
-                pdf.cell(usable / 2, 6, dates, ln=1, align="R")
+                pdf.cell(usable / 2, 6, dates, align="R", new_x=XPos.LMARGIN, new_y=YPos.NEXT)
 
             pdf.set_font("Helvetica", "B", 9.5)
-            pdf.cell(0, 5, _pdf_safe(role["title"]), ln=1)
+            pdf.cell(0, 5, _pdf_safe(role["title"]), new_x=XPos.LMARGIN, new_y=YPos.NEXT)
             pdf.ln(1)
             for b in role["bullets"]:
                 pdf.add_bullet(b["label"], b["text"])
@@ -689,17 +691,18 @@ def write_resume_pdf(data: dict, exp_data: dict, path: str):
                 bold_left = prefix_len - chars_rendered
                 if bold_left >= len(line):
                     pdf.set_font("Helvetica", "B", 9)
-                    pdf.cell(usable_w, 4, line, ln=1)
+                    pdf.cell(usable_w, 4, line, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
                 else:
                     bold_part = line[:bold_left]
                     normal_part = line[bold_left:]
                     pdf.set_font("Helvetica", "B", 9)
                     pdf.cell(pdf.get_string_width(bold_part), 4, bold_part)
                     pdf.set_font("Helvetica", "", 9)
-                    pdf.cell(usable_w - pdf.get_string_width(bold_part), 4, normal_part, ln=1)
+                    pdf.cell(usable_w - pdf.get_string_width(bold_part), 4, normal_part,
+                             new_x=XPos.LMARGIN, new_y=YPos.NEXT)
             else:
                 pdf.set_font("Helvetica", "", 9)
-                pdf.cell(usable_w, 4, line, ln=1)
+                pdf.cell(usable_w, 4, line, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
             chars_rendered += len(line) + 1
     pdf.ln(2)
 
@@ -710,18 +713,18 @@ def write_resume_pdf(data: dict, exp_data: dict, path: str):
     pdf.set_font("Helvetica", "B", 10)
     pdf.cell(usable / 2, 5, edu["degree"])
     pdf.set_font("Helvetica", "", 9)
-    pdf.cell(usable / 2, 5, edu["date"], ln=1, align="R")
+    pdf.cell(usable / 2, 5, edu["date"], align="R", new_x=XPos.LMARGIN, new_y=YPos.NEXT)
     pdf.set_font("Helvetica", "", 9)
-    pdf.cell(0, 5, edu["school"], ln=1)
+    pdf.cell(0, 5, edu["school"], new_x=XPos.LMARGIN, new_y=YPos.NEXT)
     pdf.ln(2)
 
     # Certifications
     pdf.section_header("CERTIFICATIONS")
     for cert in exp_data.get("certifications", []):
         pdf.set_font("Helvetica", "B", 10)
-        pdf.cell(0, 5, cert["name"], ln=1)
+        pdf.cell(0, 5, cert["name"], new_x=XPos.LMARGIN, new_y=YPos.NEXT)
         pdf.set_font("Helvetica", "", 9)
-        pdf.cell(0, 4, cert["issuer"], ln=1)
+        pdf.cell(0, 4, cert["issuer"], new_x=XPos.LMARGIN, new_y=YPos.NEXT)
     pdf.ln(2)
 
     # Volunteering
@@ -731,9 +734,9 @@ def write_resume_pdf(data: dict, exp_data: dict, path: str):
         pdf.set_font("Helvetica", "B", 9)
         pdf.cell(usable / 2, 4, v["org"])
         pdf.set_font("Helvetica", "", 9)
-        pdf.cell(usable / 2, 4, v["dates"], ln=1, align="R")
+        pdf.cell(usable / 2, 4, v["dates"], align="R", new_x=XPos.LMARGIN, new_y=YPos.NEXT)
         pdf.set_font("Helvetica", "", 8.5)
-        pdf.cell(0, 4, v["role"], ln=1)
+        pdf.cell(0, 4, v["role"], new_x=XPos.LMARGIN, new_y=YPos.NEXT)
 
     pdf.output(path)
 
@@ -748,13 +751,13 @@ def write_cover_letter_pdf(data: dict, exp_data: dict, path: str):
     # Name
     pdf.set_font("Helvetica", "B", 20)
     pdf.set_text_color(*TEAL_HEX)
-    pdf.cell(0, 10, c["name"], ln=1, align="C")
+    pdf.cell(0, 10, c["name"], align="C", new_x=XPos.LMARGIN, new_y=YPos.NEXT)
 
     # Contact
     pdf.set_font("Helvetica", "", 9)
     pdf.set_text_color(0, 0, 0)
     contact = f"{c['address']}  |  {c['phone']}  |  {c['email']}"
-    pdf.cell(0, 5, contact, ln=1, align="C")
+    pdf.cell(0, 5, contact, align="C", new_x=XPos.LMARGIN, new_y=YPos.NEXT)
 
     # Teal rule
     pdf.ln(3)
@@ -794,21 +797,24 @@ def write_cover_letter_pdf(data: dict, exp_data: dict, path: str):
         if non_bullet_lines:
             text = " ".join(l.strip() for l in non_bullet_lines if l.strip())
             if text:
-                pdf.multi_cell(0, 4.5, text)
+                pdf.set_x(pdf.l_margin)
+                pdf.multi_cell(pdf.w - pdf.l_margin - pdf.r_margin, 4.5, text)
                 pdf.ln(2)
 
         for bl in bullet_lines:
             bl_text = bl.strip().lstrip("- ")
-            pdf.cell(5, 4.5, "- ")
-            remaining = pdf.w - pdf.r_margin - pdf.get_x()
-            pdf.multi_cell(remaining, 4.5, bl_text)
+            indent = 5
+            usable_w = pdf.w - pdf.l_margin - pdf.r_margin
+            pdf.set_x(pdf.l_margin)
+            pdf.cell(indent, 4.5, "- ")
+            pdf.multi_cell(usable_w - indent, 4.5, bl_text)
 
     # Render sign-off with name on its own line
     if signoff_line:
         pdf.ln(4)
-        pdf.cell(0, 4.5, signoff_line, ln=1)
+        pdf.cell(0, 4.5, signoff_line, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
         pdf.ln(2)
-        pdf.cell(0, 4.5, name_line, ln=1)
+        pdf.cell(0, 4.5, name_line, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
 
     pdf.output(path)
 

@@ -1,0 +1,18 @@
+David Kreuter
+108 West Cherbourg Dr, Cheektowaga, NY  |  +1 716-444-9433  |  davidckreuter@gmail.com
+
+Dear Hiring Manager,
+
+As an infrastructure and networking engineer with more than a decade of experience, I have built my career at the intersection of networking, security, and software-driven automation. At M&T Bank, I engineered networking solutions at enterprise scale—from automating Check Point firewall rule generation and DMZ provisioning to building an intelligent IP addressing engine via InfoBlox APIs that eliminated more than 1,000 engineering hours each year. I also architected highly available infrastructure across three geo-redundant data centers, where diagnosing complex networking issues and ensuring secure, resilient connectivity were daily requirements.
+
+My background aligns closely with Tailscale's mission. A few highlights:
+
+• Designed and operated VPN tunnels bridging on-premises and cloud networks, and architected redundant DNS solutions across distributed environments spanning 12 airports and multiple data centers.
+• Built a Python middleware platform with pub/sub queuing, retry logic, and auto-remediation—experience I would apply directly to developing back-end services and control-plane infrastructure.
+• Managed SQL-backed DBaaS platforms and high-performance cluster architectures, with strong proficiency in relational database design and operations.
+• Maintained a security-first posture across every system I have built, from day-zero network isolation policies to CIS/STIG hardening and least-privilege Active Directory automation.
+
+I thrive in ownership-driven environments. Whether incident response, customer escalations, or product ideation, I am most effective when I can take a problem end to end. Tailscale's goal of making secure networking simple and sensible resonates deeply with my work eliminating complexity for thousands of engineers. I would be excited to bring that experience to your team.
+
+Best regards,
+David Kreuter

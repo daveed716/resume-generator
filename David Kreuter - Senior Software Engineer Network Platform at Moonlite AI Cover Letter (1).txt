@@ -1,0 +1,20 @@
+David Kreuter
+108 West Cherbourg Dr, Cheektowaga, NY  |  +1 716-444-9433  |  davidckreuter@gmail.com
+
+Dear Hiring Manager,
+
+As an infrastructure automation engineer with more than a decade of experience, I have spent my career building programmable, API-driven provisioning platforms that align with Moonlite's SDN vision. At M&T Bank, I engineered a global orchestration framework managing 20,000+ virtual machines—automating everything from IP subnet allocation via Infoblox APIs, to firewall-rule generation for DMZ isolation, to compute and backup placement across three geo-redundant data centers. This work gave me deep, hands-on experience with the exact challenges of network lifecycle management, multi-tenant isolation, and security-policy enforcement at scale.
+
+My strongest alignment with this role includes:
+
+- Designed and built a Python middleware platform with pub/sub queuing, retry logic, and auto-remediation—directly analogous to building network control-plane services.
+- Automated network provisioning end to end: IP allocation, VLAN assignment, Check Point firewall-policy enforcement, and DMZ segmentation integrated into zero-touch server builds.
+- Architected Terraform-driven GitOps pipelines for cloud infrastructure deployment, applying IaC discipline to networking and compute resources alike.
+- Operated in a regulated financial environment with 100% audit compliance, giving me direct experience with the security and compliance rigor that Moonlite requires for enterprise AI infrastructure.
+
+I recognize that this role demands deeper expertise in SDN technologies such as VXLAN overlays, DPU programming, and RDMA/RoCE optimization than my current work has required. However, my foundation in network automation, API-driven provisioning, Python platform engineering, and high-availability architecture positions me to ramp up quickly—and my track record of engineering first-of-their-kind solutions in constrained environments demonstrates that I thrive when building from the ground up.
+
+I would welcome the opportunity to bring my infrastructure-platform experience to Moonlite's network-engineering team. Thank you for your time and consideration.
+
+Best regards,
+David Kreuter

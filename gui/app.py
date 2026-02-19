@@ -5,6 +5,7 @@ import customtkinter as ctk
 from core.config_manager import load_config, save_config
 from core.models import AppConfig
 from gui.dialogs import ErrorDialog
+from gui.experience_tab import ExperienceTab
 from gui.generate_tab import GenerateTab
 from gui.history_tab import HistoryTab
 from gui.settings_tab import SettingsTab
@@ -15,19 +16,18 @@ class App(ctk.CTk):
         super().__init__()
 
         self.title("Resume & Cover Letter Generator")
-        self.geometry("1000x700")
-        self.minsize(800, 600)
+        self.geometry("1100x750")
+        self.minsize(900, 640)
 
         # Load persisted config
         self._config = load_config()
 
-        # Tab view
-        self._tabview = ctk.CTkTabview(self)
+        # Tab view — command fires on every tab switch
+        self._tabview = ctk.CTkTabview(self, command=self._on_tab_change)
         self._tabview.pack(fill="both", expand=True, padx=10, pady=10)
 
-        self._tabview.add("Generate")
-        self._tabview.add("History")
-        self._tabview.add("Settings")
+        for name in ("Generate", "History", "Experience", "Settings"):
+            self._tabview.add(name)
 
         # Create tabs
         self._generate_tab = GenerateTab(self._tabview.tab("Generate"), self)
@@ -36,14 +36,27 @@ class App(ctk.CTk):
         self._history_tab = HistoryTab(self._tabview.tab("History"), self)
         self._history_tab.pack(fill="both", expand=True)
 
+        self._experience_tab = ExperienceTab(self._tabview.tab("Experience"), self)
+        self._experience_tab.pack(fill="both", expand=True)
+
         self._settings_tab = SettingsTab(self._tabview.tab("Settings"), self)
         self._settings_tab.pack(fill="both", expand=True)
 
-        # Load config into settings form
+        # Populate settings form and initial loads
         self._settings_tab.load_config(self._config)
-
-        # Initial history load
         self._history_tab.refresh()
+        # Load experience data if file is already configured
+        if self._config.experience_file:
+            self._experience_tab.load()
+
+    # --- Tab switch handler ---
+
+    def _on_tab_change(self):
+        tab = self._tabview.get()
+        if tab == "History":
+            self._history_tab.refresh()
+        elif tab == "Experience":
+            self._experience_tab.load()
 
     # --- Controller methods used by tabs ---
 

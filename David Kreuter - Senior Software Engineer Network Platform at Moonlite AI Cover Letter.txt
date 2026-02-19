@@ -1,0 +1,20 @@
+David Kreuter
+108 West Cherbourg Dr, Cheektowaga, NY  |  +1 716-444-9433  |  davidckreuter@gmail.com
+
+Dear Hiring Manager,
+
+As a Senior Automation Engineer with over a decade of experience building production-grade provisioning platforms within regulated financial infrastructure, I am excited about the opportunity to help Moonlite build its software-defined networking platform. My career has been defined by designing the exact kind of systems this role demands: automated network provisioning, programmatic lifecycle management, API-driven orchestration, and multi-tenant isolation—all at enterprise scale.
+
+At M&T Bank, I engineered the network automation layer for a global provisioning framework managing 20,000+ virtual machines across three geo-redundant datacenters. This included building automated IP subnet allocation through InfoBlox APIs, programmatic Check Point firewall rule generation for day-zero DMZ isolation, and a custom Python middleware platform with pub/sub queuing for high-volume orchestration. I also architected our Terraform-driven GitOps pipelines and designed the cloud abstraction layer that made our provisioning system infrastructure-agnostic—the same kind of control-plane thinking that underpins SDN architecture.
+
+A few highlights that map directly to this role:
+
+- Built automated network provisioning and lifecycle management systems that handle IP allocation, firewall policy enforcement, and resource decommissioning at scale
+- Developed Python middleware and REST API integrations to orchestrate complex, multi-system workflows with retry logic and self-healing
+- Architected highly available, multi-datacenter infrastructure with automated failover in a regulated financial environment
+- Designed infrastructure-as-code pipelines using Terraform and GitOps, establishing the governance standards adopted enterprise-wide
+
+I am eager to apply my background in network automation, platform engineering, and security-first infrastructure design to Moonlite's SDN platform. The opportunity to work with Bluefield DPUs, RDMA, and high-performance AI networking is exactly the type of technical challenge I thrive on. Thank you for your time and consideration.
+
+Best regards,
+David Kreuter
