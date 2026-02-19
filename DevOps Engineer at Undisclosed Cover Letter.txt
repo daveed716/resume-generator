@@ -1,0 +1,21 @@
+David Kreuter
+108 West Cherbourg Dr, Cheektowaga, NY  |  +1 716-444-9433  |  davidckreuter@gmail.com
+
+Dear Hiring Manager,
+
+As a DevOps Engineer with over a decade of experience building scalable, automated infrastructure at M&T Bank, I have dedicated my career to bridging the gap between development velocity and operational excellence. I am writing to express my strong interest in the DevOps Engineer position, where I can apply my expertise in CI/CD automation, Infrastructure as Code, and system observability to drive your engineering team's success.
+
+In my current role, I have championed the adoption of Infrastructure as Code by developing Terraform-driven CI/CD pipelines that standardize deployments and eliminate configuration drift across enterprise environments. I engineered a global provisioning framework managing 20,000+ virtual machines with full API integration across VMware, Rubrik, ServiceNow, and Infoblox—ensuring 100% compliance while reclaiming 1,000+ engineering hours annually. My infrastructure spans three geo-redundant data centers designed for maximum uptime and disaster recovery readiness, directly aligning with your need for high-availability, resilient systems.
+
+My technical background matches your core requirements:
+
+- Cloud & IaC Expertise: Proficient in Terraform, Azure, and automated provisioning workflows that support rapid, repeatable deployments
+- CI/CD & Developer Experience: Built scalable pipelines and automation tools that enhance engineering velocity while maintaining strong governance
+- Observability & Incident Response: Designed Grafana dashboards and service-aware alerting systems that reduce MTTR through proactive monitoring
+- Cost Optimization: Delivered $400k in licensing savings through intelligent automation and infrastructure optimization
+
+I am excited to bring my passion for automation, system resilience, and developer enablement to your team. Thank you for your consideration.
+
+Best regards,
+
+David Kreuter

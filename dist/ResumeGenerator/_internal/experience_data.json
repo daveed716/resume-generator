@@ -1,0 +1,197 @@
+{
+  "contact": {
+    "name": "David Kreuter",
+    "address": "108 West Cherbourg Dr, Cheektowaga, NY",
+    "phone": "+1 716-444-9433",
+    "email": "davidckreuter@gmail.com"
+  },
+  "default_headline": "Senior Infrastructure Automation Architect",
+  "default_summary": "Enthusiastic technical professional with 10+ years of experience managing enterprise systems. Specialized in the end-to-end lifecycle of financial infrastructure, having architected a global provisioning framework managing 20,000+ virtual machines. Expert in integrating complex API-driven workflows across VMware, ServiceNow, Infoblox, Rubrik, and Ansible Automation Platform to ensure 100% audit compliance. Proven track record of high-stakes problem solving, including $400k in direct licensing savings and the engineering of first-of-their-kind automated DMZ and SQL high-availability solutions.",
+  "experience": [
+    {
+      "company": "M&T Bank",
+      "dates": "03/2019 - Present",
+      "roles": [
+        {
+          "title": "Automation Engineer (formerly Systems Engineer)",
+          "bullets": [
+            {
+              "label": "Platform Engineering & Middleware",
+              "text": "Designed and developed a custom Python orchestration application as middleware between ServiceNow and Ansible Automation Platform; implemented advanced retry logic, auto-remediation of deployment failures, and a pub/sub queue model for high-volume scaling.",
+              "tags": ["python", "middleware", "platform-engineering", "self-healing", "api-design", "pub-sub"]
+            },
+            {
+              "label": "Database as a Service (DBaaS)",
+              "text": "Collaborated with Database Engineering to architect a high-performance on-premise SQL cluster, enabling a unified DBaaS offering that consolidated fragmented legacy databases and streamlined application delivery.",
+              "tags": ["sql-server", "dbaas", "consolidation", "infrastructure-strategy"]
+            },
+            {
+              "label": "Cloud Abstraction & Redesign",
+              "text": "Refactored legacy on-premise automation workflows to be fully cloud-agnostic, enabling seamless deployment to Azure; designed the logic to be transparent to end-users, maintaining a consistent interface while abstracting the underlying infrastructure provider.",
+              "tags": ["azure", "abstraction", "refactoring", "automation", "hybrid-cloud", "platform-engineering"]
+            },
+            {
+              "label": "Hybrid Cloud & GitOps",
+              "text": "Architected GitOps-driven CI/CD pipelines using Terraform to automate the deployment of virtual machines to Azure; implemented a pull-request-based workflow that standardized infrastructure changes through automated plan/apply cycles.",
+              "tags": ["azure", "terraform", "gitops", "ci-cd", "iac"]
+            },
+            {
+              "label": "End-to-End Hardening & Provisioning",
+              "text": "Developed a zero-touch build workflow that delivers fully patched and hardened Linux (Ansible) and Windows (GPO) servers; automated agent installation, drive formatting, and optional hardened SQL deployments at scale.",
+              "tags": ["ansible", "gpo", "security-hardening", "compliance", "automation"]
+            },
+            {
+              "label": "Technical Leadership",
+              "text": "Serve as a primary mentor for the Technology Development Program (TDP), setting enterprise-wide standards for naming conventions, Git branching strategies, and unit testing for infrastructure code.",
+              "tags": ["mentorship", "leadership", "git-flow", "best-practices", "governance"]
+            },
+            {
+              "label": "Architectural Scale",
+              "text": "Engineered a global server provisioning framework that deployed and managed 20,000+ virtual machines; integrated Rubrik and VMware APIs to automate backup and compute placement, ensuring 100% RTO/RPO compliance at build-time.",
+              "tags": ["vmware", "rubrik", "automation", "api", "data-protection", "provisioning"]
+            },
+            {
+              "label": "Infrastructure Resilience",
+              "text": "Engineered and maintained a highly resilient infrastructure architecture spanning three identical, geo-redundant datacenters to ensure maximum uptime and disaster recovery readiness.",
+              "tags": ["high-availability", "disaster-recovery", "data-center", "resilience", "architecture"]
+            },
+            {
+              "label": "Network Security Automation",
+              "text": "Automated Check Point firewall rule generation and DMZ provisioning; integrated security policy updates into the server build-cycle to ensure day-zero network isolation and hardened security posture.",
+              "tags": ["check-point", "firewall", "security-automation", "networking", "dmz"]
+            },
+            {
+              "label": "Cost Optimization",
+              "text": "Orchestrated the migration of 850 branch file servers within a strict 3-month window using custom PowerShell automation, avoiding $400,000 in extended licensing fees.",
+              "tags": ["powershell", "migration", "cost-savings", "automation"]
+            },
+            {
+              "label": "Operational Efficiency",
+              "text": "Developed an intelligent IP provisioning engine via InfoBlox API integrations, eliminating 1,000+ annual engineer hours and resolving a multi-year infrastructure bottleneck.",
+              "tags": ["infoblox", "api", "automation", "ip-management", "efficiency"]
+            },
+            {
+              "label": "Risk Mitigation",
+              "text": "Authored Active Directory lifecycle scripts with built-in 'Read-Only' dry-run modes; implemented Least Privilege permissions and robust rollback protocols for stale object cleanup.",
+              "tags": ["active-directory", "security", "powershell", "risk-management"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "company": "OTG Management",
+      "dates": "07/2013 - 02/2019",
+      "roles": [
+        {
+          "title": "Lead Network Engineer",
+          "bullets": [
+            {
+              "label": "Performance Engineering",
+              "text": "Diagnosed and resolved a mission-critical server hang by identifying a NUMA architecture mismatch; re-aligned vCPU/Memory topology to eliminate cross-node latency and restore system stability.",
+              "tags": ["numa", "performance-tuning", "hardware-architecture", "troubleshooting", "vmware"]
+            },
+            {
+              "label": "Security Architecture",
+              "text": "Engineered a secure reverse proxy solution to protect sensitive internal infrastructure, enabling customer online ordering while mitigating external threat vectors.",
+              "tags": ["security", "reverse-proxy", "nginx", "web-security"]
+            },
+            {
+              "label": "Infrastructure Resilience",
+              "text": "Architected a highly redundant DNS solution that significantly reduced network outages and optimized global traffic performance.",
+              "tags": ["dns", "high-availability", "networking", "resilience"]
+            },
+            {
+              "label": "Cloud Connectivity",
+              "text": "Established secure, encrypted VPN tunnels to bridge on-premise networks with cloud resources, ensuring seamless hybrid-cloud operations.",
+              "tags": ["vpn", "cloud", "hybrid-cloud", "networking", "encryption"]
+            }
+          ]
+        },
+        {
+          "title": "Network Engineer",
+          "bullets": [
+            {
+              "label": "Enterprise Mobility",
+              "text": "Successfully onboarded and managed 15,000 iPads via Meraki MDM, implementing automated security protocols including geo-fencing, remote-wipe triggers, and custom application deployment.",
+              "tags": ["meraki", "mdm", "mobile", "cloud", "device-management"]
+            },
+            {
+              "label": "Cybersecurity Governance",
+              "text": "Directed enterprise-wide vulnerability scanning and remediation efforts for internal and external systems to maintain a hardened security posture.",
+              "tags": ["security", "vulnerability-scanning", "remediation", "cybersecurity"]
+            },
+            {
+              "label": "Network Administration",
+              "text": "Managed complex firewall rules and switch ACLs for a massive distributed network spanning 12 airports and 3 satellite offices.",
+              "tags": ["firewall", "networking", "acl", "distributed-network"]
+            },
+            {
+              "label": "Proactive Monitoring",
+              "text": "Developed service-aware alerting frameworks for business-critical systems, reducing mean time to resolution (MTTR) through proactive incident detection.",
+              "tags": ["monitoring", "alerting", "incident-response", "mttr"]
+            }
+          ]
+        },
+        {
+          "title": "Systems Administrator",
+          "bullets": [
+            {
+              "label": "Disaster Recovery",
+              "text": "Spearheaded the deployment of Datto backup and disaster recovery appliances to ensure 100% business continuity for critical operations.",
+              "tags": ["datto", "backup", "disaster-recovery", "business-continuity"]
+            },
+            {
+              "label": "Operational Visibility",
+              "text": "Modernized infrastructure monitoring by designing custom Grafana dashboards to visualize real-time performance metrics.",
+              "tags": ["grafana", "monitoring", "dashboards", "metrics"]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "skills": {
+    "Languages": ["Python", "PowerShell", "Bash", "SQL", "Javascript", "PHP", "YAML"],
+    "Automation/Orchestration": ["Ansible Automation Platform", "Middleware Development", "Terraform", "GitOps", "CI/CD Pipelines", "Gitlab", "Grafana", "GraphQL", "REST API", "ServiceNow", "Unit Testing"],
+    "Infrastructure": ["Azure Cloud Services", "DBaaS", "OS Hardening (CIS/STIG)", "Infrastructure as Code (IaC)", "NUMA Tuning", "Check Point Firewalls", "VMware vSphere", "Nutanix AHV", "Rubrik", "Active Directory"],
+    "Networking": ["BGP", "DNS", "F5 Load Balancing", "High Availability", "Intrusion Detection", "Meraki MDM", "VPN", "VRRP", "Vulnerability Scanning"]
+  },
+  "education": {
+    "degree": "Bachelor Of Science in Computer Information Systems",
+    "school": "SUNY Fredonia",
+    "date": "12/2012"
+  },
+  "certifications": [
+    {
+      "name": "Certified Meraki Network Operator",
+      "issuer": "Meraki"
+    }
+  ],
+  "volunteering": [
+    {
+      "org": "Habitat For Humanity",
+      "dates": "07/2025 - Present",
+      "role": "Volunteer",
+      "location": "Buffalo"
+    },
+    {
+      "org": "Tifft Nature Preserve",
+      "dates": "01/2025 - Present",
+      "role": "Volunteer",
+      "location": "Buffalo, NY"
+    },
+    {
+      "org": "716 Paws",
+      "dates": "01/2022 - Present",
+      "role": "Thermal drone pilot for search and rescue missions.",
+      "location": "Buffalo"
+    }
+  ],
+  "technical_appendix": {
+    "platform_metrics": ["20,000+ VMs Managed", "1,000+ IP Engineering Hours Reclaimed/Year", "$400k Licensing Savings"],
+    "leadership_scope": ["TDP Mentor", "Standardization Architect for Branching & Testing"],
+    "azure_keywords": ["ARM Templates", "NSG", "Azure VNets", "Terraform azurerm", "State Locking", "Provider Abstraction"]
+  },
+  "cover_letter_example": "Dear Hiring Manager,\n\nAs a Senior Automation Engineer with over a decade of experience, I specialize in building infrastructure platforms that scale. At M&T Bank, I have been a driving force behind our hybrid cloud transition, specifically in refactoring legacy on-premise automations to work seamlessly within Azure. By designing an abstraction layer that is entirely transparent to the end-user, I enabled our development teams to leverage public cloud resources without changing their existing workflows—standardizing the provisioning experience across 20,000+ virtual machines.\n\nMy expertise lies in treating infrastructure as software. Whether it is architecting GitOps pipelines using Terraform, developing custom Python middleware to bridge ServiceNow and Ansible, or engineering a high-availability framework across three geo-redundant datacenters, my goal is always to deliver resilience through automation. I am particularly proud of my ability to mentor the next generation of engineers through M&T’s Technology Development Program, where I establish the standards for Git branching, unit testing, and technical governance that ensure our code remains audit-compliant and robust.\n\nI am eager to bring my background in financial-grade automation, cloud abstraction, and platform engineering to your team. Thank you for your time and consideration.\n\nBest regards,\n\nDavid Kreuter"
+}

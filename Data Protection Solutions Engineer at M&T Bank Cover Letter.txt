@@ -1,0 +1,21 @@
+David Kreuter
+108 West Cherbourg Dr, Cheektowaga, NY  |  +1 716-444-9433  |  davidckreuter@gmail.com
+
+Dear Hiring Manager,
+
+As a Senior Automation Engineer with over a decade of experience managing enterprise systems--including five years dedicated to transforming infrastructure at M&T Bank--I am excited to apply for the Data Protection Solutions Engineer position. My career has been defined by moving legacy manual processes into fully orchestrated, self-service models. Having already architected the provisioning framework used for every virtual machine at M&T Bank, with integrated Rubrik Security Cloud automation ensuring 100% RTO/RPO compliance, I am uniquely positioned to help mature our data resilience ecosystem even further.
+
+The job description emphasizes bridging the gap between advanced architecture and seamless execution, a balance I maintain daily. A primary example of this is my recent work integrating the Rubrik API directly into our server build process. I developed PowerShell automation that pulls application-specific RTO and RPO requirements from ServiceNow to configure production backups at the moment of birth. This project didn't just automate a task; it ensured 100% compliance with our data protection standards across 20,000+ VMs without requiring manual intervention from the data protection team. This is exactly the kind of "Build & Run" philosophy described in the role--designing resilient systems and owning their operational lifecycle from onboarding through incident response.
+
+My technical background aligns precisely with your requirements:
+
+- Data Protection Automation: I have hands-on experience with Rubrik Security Cloud, building API-driven workflows that automate backup policy assignment, retention enforcement, and compliance reporting while maintaining immutability and recovery validation standards in a regulated banking environment.
+- Infrastructure as Code & CI/CD: I am an expert in PowerShell and REST API integration, with working knowledge of Ansible for configuration management. I routinely use GitLab for source control and have built repeatable, policy-driven deployment processes that scale reliably across hybrid environments.
+- Lifecycle Ownership: I currently own the "Build to Decommission" workflow, including automated IP reclamation via InfoBlox APIs, ServiceNow Change Control integration, and Active Directory cleanup processes--eliminating 1,000+ annual engineer hours while maintaining audit compliance.
+- Cross-Functional Collaboration: I have a proven track record partnering with Network, Security, and Database teams to solve complex challenges, including "Always-On" SQL clustering across geo-redundant data centers and automated DMZ provisioning--both firsts in bank history.
+
+I am eager to bring my deep knowledge of M&T's internal infrastructure, my passion for automation, and my operational mindset to help drive the next evolution of our data resilience framework. The opportunity to work within an established Rubrik ecosystem and mature it toward a fully self-service model is exactly the challenge I am looking for. Thank you for your time and for considering my application.
+
+Best regards,
+
+David Kreuter

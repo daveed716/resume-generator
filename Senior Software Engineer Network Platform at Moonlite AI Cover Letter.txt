@@ -1,0 +1,20 @@
+David Kreuter
+108 West Cherbourg Dr, Cheektowaga, NY  |  +1 716-444-9433  |  davidckreuter@gmail.com
+
+Dear Hiring Manager,
+
+I am excited about the Senior Software Engineer – Network Platform role at Moonlite AI. For the past six years at M&T Bank, I have been building exactly the kind of production-grade orchestration and provisioning systems that sit at the heart of what you are creating — automated lifecycle management, API-driven middleware, multi-tenant infrastructure, and cloud-agnostic deployment platforms — all within a heavily regulated financial services environment. The opportunity to apply that experience to software-defined networking for high-performance AI infrastructure is a compelling next step.
+
+My core strength is designing the programmatic glue that ties complex infrastructure together. At M&T, I architected a Python orchestration platform that manages provisioning across 20,000+ VMs, handling everything from network configuration and security hardening to full resource lifecycle management. I built this as cloud-agnostic middleware with Terraform and REST APIs, abstracting Azure and on-premises VMware behind a single interface — the same abstraction pattern critical to an SDN control plane. Before that, as a Lead Network Engineer, I cut my teeth on BGP, DNS, load balancing, and diagnosing low-latency performance issues at the hardware level (NUMA topology optimization), giving me the networking fundamentals your role demands.
+
+A few highlights that map directly to this role:
+
+- Built a Python-based provisioning middleware with pub/sub queuing, retry logic, and auto-remediation — directly analogous to network orchestration and lifecycle management systems.
+- Designed cloud-agnostic infrastructure-as-code workflows with Terraform, abstracting provider differences behind a unified API — a pattern core to SDN platform design.
+- Delivered zero-touch, end-to-end automated provisioning with CIS/STIG security hardening and policy enforcement in a regulated banking environment.
+- Deep networking experience, including BGP, DNS, load balancing, high-availability design, and firewall policy management.
+
+I am energized by the chance to bring my provisioning and platform engineering expertise to the SDN and high-performance networking domain at an early-stage company where I can have an outsized impact. I would love to discuss how my background aligns with Moonlite's mission.
+
+Best regards,
+David Kreuter

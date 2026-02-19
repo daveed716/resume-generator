@@ -1,0 +1,64 @@
+David Kreuter
+108 West Cherbourg Dr, Cheektowaga, NY  |  +1 716-444-9433  |  davidckreuter@gmail.com
+
+Senior Infrastructure Automation Architect | Data Protection & Resilience Engineering
+
+Enthusiastic technical professional with 10+ years of experience managing enterprise systems, specializing in data protection, backup automation, and infrastructure resilience. Architected a global provisioning framework managing 20,000+ virtual machines with integrated Rubrik Security Cloud backup policies ensuring 100% RTO/RPO compliance. Expert in building API-driven automation workflows across VMware, ServiceNow, Infoblox, Rubrik, and Ansible Automation Platform within regulated banking environments. Proven track record delivering operational efficiency improvements, including $400k in licensing savings, automated disaster recovery solutions, and the engineering of first-of-their-kind backup lifecycle integrations that eliminated manual intervention while maintaining audit compliance.
+
+WORK EXPERIENCE
+============================================================
+
+M&T Bank    03/2019 - Present
+Automation Engineer (formerly Systems Engineer)
+----------------------------------------
+  * Data Protection Architecture:: Engineered a global server provisioning framework that deployed and managed 20,000+ virtual machines; integrated Rubrik and VMware APIs to automate backup policy assignment and compute placement, ensuring 100% RTO/RPO compliance at build-time without manual data protection team intervention.
+  * Disaster Recovery Automation:: Partnered with Database Architects to automate "Always-On" MS SQL clusters across three geo-redundant data centers; pioneered an automated firewall rule request system to ensure seamless inter-cluster communication and recovery capabilities.
+  * Operational Efficiency:: Developed an intelligent IP provisioning engine via InfoBlox API integrations, eliminating 1,000+ annual engineer hours and resolving a multi-year infrastructure bottleneck through REST API-driven automation.
+  * Governance & Compliance:: Designed an end-to-end "Auto-Decommission" workflow with integrated ServiceNow Change Control APIs; automated the generation and closure of audit-compliant paperwork, reducing administrative overhead by 100% per retirement while maintaining regulatory compliance.
+  * Cost Optimization:: Orchestrated the migration of 850 branch file servers within a strict 3-month window using custom PowerShell automation, avoiding $400,000 in extended licensing fees through efficient lifecycle management.
+  * Infrastructure Strategy:: Modernized legacy data center networking by collaborating with Network Architects to design high-capacity subnets, enabling fully automated DMZ provisioning for the first time in bank history.
+  * Risk Mitigation:: Authored Active Directory lifecycle scripts with built-in "Read-Only" dry-run modes; implemented Least Privilege permissions and robust rollback protocols for stale object cleanup to ensure operational safety.
+
+OTG Management    07/2013 - 02/2019
+Lead Network Engineer
+----------------------------------------
+  * Security Architecture:: Engineered a secure reverse proxy solution to protect sensitive internal infrastructure, enabling customer online ordering while mitigating external threat vectors.
+  * Infrastructure Resilience:: Architected a highly redundant DNS solution that significantly reduced network outages and optimized global traffic performance.
+  * Cloud Connectivity:: Established secure, encrypted VPN tunnels to bridge on-premise networks with cloud resources, ensuring seamless hybrid-cloud operations.
+
+  Network Engineer
+  ------------------------------------
+  * Cybersecurity Governance:: Directed enterprise-wide vulnerability scanning and remediation efforts for internal and external systems to maintain a hardened security posture.
+  * Network Administration:: Managed complex firewall rules and switch ACLs for a massive distributed network spanning 12 airports and 3 satellite offices.
+  * Proactive Monitoring:: Developed service-aware alerting frameworks for business-critical systems, reducing mean time to resolution (MTTR) through proactive incident detection.
+  * Mobile Management:: Successfully onboarded and managed 15,000 iPads via Meraki MDM, enabling centralized cloud-based control of enterprise mobile assets.
+
+  Systems Administrator
+  ------------------------------------
+  * Disaster Recovery:: Spearheaded the deployment of Datto backup and disaster recovery appliances to ensure 100% business continuity for critical operations.
+  * Operational Visibility:: Modernized infrastructure monitoring by designing custom Grafana dashboards to visualize real-time performance metrics.
+
+SKILLS
+============================================================
+  Languages: PowerShell, Python, YAML, SQL, Bash, Javascript, PHP
+  Automation/Orchestration: Ansible Automation Platform, REST API, GraphQL, CI/CD Pipelines, ServiceNow, Gitlab, Source Control, Disaster Recovery, Grafana, Time-series Database
+  Infrastructure: Rubrik, VMware vSphere, Azure, Infrastructure as Code, Active Directory, Disaster Recovery, Policy-driven storage tiering, Infoblox, Windows Server, Red Hat Linux, Server Lifecycle, Nutanix AHV, Citrix Virtual Apps, Group Policy, IIS, NGINX Reverse Proxy, Artifactory, SSL/TLS, RAID, Datto
+  Networking: DNS, VPN, High Availability, Firewall Rules, Load Balancing, F5, Uptime Monitoring, Vulnerability Scanning, Intrusion Detection, VRRP, BGP, Meraki, Arista
+
+EDUCATION
+============================================================
+  Bachelor Of Science in Computer Information Systems
+  SUNY Fredonia -- 12/2012
+
+CERTIFICATIONS
+============================================================
+  Certified Meraki Network Operator - Meraki
+
+VOLUNTEERING & LEADERSHIP
+============================================================
+  Habitat For Humanity -- 07/2025 - Present
+  Volunteer -- Buffalo
+  Tifft Nature Preserve -- 01/2025 - Present
+  Volunteer -- Buffalo, NY
+  716 Paws -- 01/2022 - Present
+  Thermal drone pilot for search and rescue missions. -- Buffalo

@@ -1,0 +1,20 @@
+David Kreuter
+108 West Cherbourg Dr, Cheektowaga, NY  |  +1 716-444-9433  |  davidckreuter@gmail.com
+
+Dear Hiring Manager,
+
+As an Automation Engineer with over a decade of experience keeping enterprise-critical infrastructure running at scale, I am excited about the opportunity to bring my DevOps and Site Reliability expertise to Zoom's Team Chat and Zoom Events platforms. At M&T Bank, I have been directly responsible for the availability and resilience of infrastructure serving 20,000+ virtual machines across three geo-redundant data centers—exactly the kind of high-availability, zero-downtime environment that defines Zoom's platform experience.
+
+My day-to-day work maps directly to the responsibilities outlined in this role:
+
+- Designed GitOps-driven CI/CD pipelines using Terraform and Ansible to automate production deployments, configuration management, and infrastructure changes at scale.
+- Engineered disaster recovery strategies across multiple regional data centers, ensuring 100% RTO/RPO compliance and continuous service availability.
+- Built custom Python and Bash orchestration tooling with auto-remediation, retry logic, and pub/sub queuing to support high-volume, zero-touch deployments.
+- Developed proactive monitoring and alerting frameworks (Grafana, API-driven health checks) that reduced MTTR and enabled faster incident resolution during on-call rotations.
+
+I thrive in environments where production uptime is non-negotiable and where creative problem-solving under pressure is the norm. Whether it is diagnosing a NUMA mismatch causing a critical server hang or automating firewall policy generation for day-zero security, I approach every challenge with the analytical rigor and proactive mindset that a platform like Zoom demands. I would welcome the chance to bring that same energy to your engineering operations team.
+
+Thank you for your time and consideration.
+
+Best regards,
+David Kreuter

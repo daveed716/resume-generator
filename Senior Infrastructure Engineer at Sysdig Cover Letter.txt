@@ -1,0 +1,21 @@
+David Kreuter
+108 West Cherbourg Dr, Cheektowaga, NY  |  +1 716-444-9433  |  davidckreuter@gmail.com
+
+Dear Hiring Manager,
+
+As a Senior Automation Engineer with over a decade of experience managing enterprise infrastructure across cloud and on-premise environments, I have built my career on automation-first principles and resilient system design. I am writing to express my strong interest in the Senior Infrastructure Engineer position at Sysdig, where I can apply my expertise in Terraform, Ansible, and Linux administration to help secure innovation in the cloud.
+
+In my current role at M&T Bank, I engineered a global provisioning framework managing 20,000+ virtual machines, integrating REST APIs across VMware, Rubrik, Infoblox, and ServiceNow to automate the complete infrastructure lifecycle. I have championed infrastructure as code by developing scalable CI/CD pipelines with Terraform, eliminating configuration drift and ensuring audit compliance across our multi-datacenter environment. My experience with incident response includes pioneering automated 'Always-On' SQL clusters across three geo-redundant data centers and implementing intelligent monitoring solutions that drastically reduced MTTR.
+
+My technical background aligns closely with your requirements:
+
+- Cloud & Infrastructure at Scale: Expert in building automation tools for deployment, monitoring, and lifecycle management across hybrid environments with proven scalability to 20,000+ systems.
+- Automation & IaC Mastery: Deep hands-on experience with Terraform and Ansible, comfortable writing production-grade scripts in Bash, Python, and PowerShell for complex Linux environments.
+- Incident Response & Root Cause Analysis: Track record of diagnosing complex infrastructure issues, implementing preventive measures, and engineering resilient solutions that eliminate entire classes of failures.
+- Security & Compliance: Experience designing audit-compliant workflows, implementing least-privilege security models, and managing vulnerability remediation at enterprise scale.
+
+I am eager to bring my passion for building scalable, self-healing infrastructure and my automation-driven mindset to Sysdig's mission of securing cloud innovation. Thank you for your consideration.
+
+Best regards,
+
+David Kreuter

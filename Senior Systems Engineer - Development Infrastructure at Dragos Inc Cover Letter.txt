@@ -1,0 +1,21 @@
+David Kreuter
+108 West Cherbourg Dr, Cheektowaga, NY  |  +1 716-444-9433  |  davidckreuter@gmail.com
+
+Dear Hiring Manager,
+
+As a Senior Automation Engineer with over a decade of experience managing enterprise Linux and Windows systems, I have dedicated my career to building scalable, secure infrastructure through code-driven automation. I am writing to express my strong interest in the Senior Systems Engineer position at Dragos, where I can apply my expertise in Terraform, Ansible, and CI/CD pipelines to support your critical ICS/OT cybersecurity mission.
+
+In my current role at M&T Bank, I have championed Infrastructure as Code by engineering a global provisioning framework that manages 20,000+ virtual machines across VMware vSphere environments. I developed scalable CI/CD pipelines using Terraform to eliminate configuration drift and ensure consistent, auditable deployments. My work spans the full system lifecycle—from automated image creation and patching to decommissioning—all while maintaining strict compliance with financial regulatory standards. I have also architected highly resilient, geo-redundant datacenter infrastructure and implemented intelligent automation that reclaimed 1,000+ engineering hours annually.
+
+My technical background directly aligns with your requirements:
+
+- Advanced automation with Ansible, Terraform, and PowerShell/Python/Bash scripting across Linux and Windows environments
+- Deep VMware vSphere/vCenter expertise with additional Nutanix AHV experience in production enterprise settings
+- Hands-on CI/CD pipeline design and API-driven orchestration across ServiceNow, Infoblox, and Rubrik platforms
+- Strong networking foundation including firewalls, VPNs, DNS architecture, and Active Directory/identity management
+
+I am eager to bring my passion for automation, security, and operational excellence to Dragos's mission-critical development infrastructure. Thank you for your consideration.
+
+Best regards,
+
+David Kreuter

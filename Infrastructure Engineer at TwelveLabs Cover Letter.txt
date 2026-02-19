@@ -1,0 +1,21 @@
+David Kreuter
+108 West Cherbourg Dr, Cheektowaga, NY  |  +1 716-444-9433  |  davidckreuter@gmail.com
+
+Dear Hiring Manager,
+
+As a Senior Infrastructure Engineer with over a decade of experience building scalable automation frameworks across cloud and on-premise environments, I am excited to apply for the Infrastructure Engineer position at TwelveLabs. My career has been defined by architecting robust, API-driven systems that bridge operational excellence with rapid innovation. Having engineered the provisioning framework that manages every virtual machine at M&T Bank, I am uniquely positioned to help scale TwelveLabs' AI SaaS platform as you revolutionize video understanding.
+
+The role emphasizes designing multi-tenant architectures and building flexible infrastructure across cloud providers—challenges I've tackled throughout my career. At M&T, I developed an end-to-end automation framework integrating ServiceNow, VMware, Infoblox, and Rubrik APIs to orchestrate 20,000+ VMs with zero-touch provisioning and 100% compliance. I've built CI/CD workflows with robust change control, optimized infrastructure for both performance and cost (saving $400k in one migration project), and collaborated cross-functionally with database, network, and security teams to deliver resilient, production-grade solutions.
+
+My technical background aligns directly with your requirements:
+
+- Infrastructure as Code: Expert in Ansible and PowerShell automation with deep REST API integration experience
+- Multi-Cloud & Hybrid Architecture: Built secure connectivity between on-premise data centers and cloud resources; experienced with Azure and hybrid models
+- Container & CI/CD Expertise: Designed automated provisioning pipelines with integrated compliance and rollback protocols
+- Monitoring & Security: Developed custom Grafana dashboards and implemented least-privilege, audit-compliant automation frameworks
+
+I thrive in fast-paced environments where infrastructure must scale rapidly to support new capabilities. I'm excited to bring my automation expertise and cross-functional leadership to TwelveLabs as you push the boundaries of multimodal AI.
+
+Best regards,
+
+David Kreuter

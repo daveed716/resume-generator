@@ -1,0 +1,43 @@
+David Kreuter
+108 West Cherbourg Dr, Cheektowaga, NY  |  +1 716-444-9433  |  davidckreuter@gmail.com
+
+Infrastructure Automation & Network Platform Engineer
+
+Technical professional with more than 10 years of experience building production-grade orchestration and provisioning systems for enterprise infrastructure. Specializes in designing API-driven middleware, automated lifecycle management workflows, and cloud-agnostic deployment platforms spanning 20,000+ virtual machines. Deep expertise in Python, REST API design, network architecture (BGP, DNS, F5, VPN), and infrastructure-as-code with Terraform and Ansible. Proven track record of architecting multi-tenant provisioning systems with full network isolation, security hardening to CIS/STIG standards, and end-to-end automation from deployment through decommissioning — all within a highly regulated financial services environment.
+
+WORK EXPERIENCE
+============================================================
+
+M&T Bank    03/2019 - Present
+Automation Engineer (formerly Systems Engineer)
+----------------------------------------
+  * Platform Engineering & Middleware: Designed and developed a custom Python orchestration application that serves as middleware between ServiceNow and Ansible Automation Platform; implemented advanced retry logic, auto-remediation of deployment failures, and a future-ready pub/sub queue model for high-volume network and infrastructure provisioning at scale.
+  * Network Provisioning & Lifecycle Management: Developed a zero-touch build workflow that automates end-to-end server provisioning, including network configuration, agent installation, drive formatting, and security hardening for Linux (Ansible) and Windows (GPO) — managing the full resource lifecycle from deployment through decommissioning.
+  * Cloud Abstraction & Redesign: Refactored legacy on-premises automation workflows to be fully cloud-agnostic using Terraform and infrastructure-as-code patterns, enabling seamless deployment to Azure while abstracting the underlying infrastructure provider behind a consistent programmatic API.
+  * Database as a Service (DBaaS): Collaborated with Database Engineering to architect a high-performance on-premises SQL cluster with automated provisioning, enabling a unified DBaaS offering that consolidated fragmented legacy infrastructure and streamlined multi-tenant application delivery.
+  * Technical Leadership: Serve as a primary mentor for the Technology Development Program (TDP), setting enterprise-wide standards for Git branching strategies, unit testing for infrastructure code, and governance practices aligned with regulated-industry compliance requirements.
+
+
+OTG Management    07/2013 - 02/2019
+Lead Network Engineer
+----------------------------------------
+  * Performance Engineering: Diagnosed and resolved a mission-critical server performance bottleneck by identifying a NUMA architecture mismatch; realigned vCPU/memory topology to eliminate cross-node latency — demonstrating deep Linux systems and low-latency troubleshooting expertise applicable to high-performance computing environments.
+  * Enterprise Mobility & Network Security: Orchestrated the management of 15,000 devices via Meraki MDM, implementing automated security protocols including geofencing, remote wipe triggers, and policy enforcement across a distributed network infrastructure.
+
+SKILLS
+============================================================
+  Languages: Python, Bash, YAML, SQL, PowerShell, Javascript
+  Automation/Orchestration: Terraform, REST API, Middleware Development, Ansible Automation Platform, CI/CD Pipelines, GitOps, Self-Healing Infrastructure, Unit Testing
+  Infrastructure: Azure Cloud Services, OS Hardening (CIS/STIG), VMware vSphere, Nutanix AHV, DBaaS, NUMA Tuning, Check Point Firewalls, Group Policy Objects (GPO), Active Directory
+  Networking: BGP, DNS, F5 Load Balancing, High Availability, VPN, Intrusion Detection, Meraki MDM
+
+EDUCATION
+============================================================
+  Bachelor Of Science in Computer Information Systems    12/2012
+  SUNY Fredonia
+
+CERTIFICATIONS
+============================================================
+
+VOLUNTEERING & LEADERSHIP
+============================================================
