@@ -7,6 +7,7 @@ import customtkinter as ctk
 
 from core.generator import generate_application, load_experience_data
 from core.history_manager import add_history_entry, create_history_entry
+from core.linkedin import fetch_linkedin_job, format_for_textbox
 from core.models import GenerationOptions
 from gui.widgets import StatusLog
 
@@ -16,6 +17,43 @@ class GenerateTab(ctk.CTkFrame):
         super().__init__(master, fg_color="transparent")
         self._app = app
         self._generating = False
+        self._fetching = False
+
+        # --- LinkedIn URL row ---
+        url_frame = ctk.CTkFrame(self, fg_color="transparent")
+        url_frame.pack(fill="x", padx=15, pady=(12, 4))
+
+        ctk.CTkLabel(
+            url_frame,
+            text="LinkedIn URL:",
+            font=ctk.CTkFont(size=13, weight="bold"),
+        ).pack(side="left", padx=(0, 8))
+
+        self._url_var = ctk.StringVar()
+        self._url_entry = ctk.CTkEntry(
+            url_frame,
+            textvariable=self._url_var,
+            placeholder_text="https://www.linkedin.com/jobs/view/...",
+        )
+        self._url_entry.pack(side="left", fill="x", expand=True, padx=(0, 8))
+
+        self._fetch_btn = ctk.CTkButton(
+            url_frame,
+            text="Fetch",
+            width=70,
+            command=self._on_fetch,
+        )
+        self._fetch_btn.pack(side="left", padx=(0, 8))
+
+        self._fetch_status = ctk.CTkLabel(
+            url_frame, text="", text_color="gray", width=220, anchor="w"
+        )
+        self._fetch_status.pack(side="left")
+
+        # Subtle divider
+        ctk.CTkFrame(self, height=1, fg_color="#444").pack(
+            fill="x", padx=15, pady=(6, 0)
+        )
 
         # --- Job Description ---
         ctk.CTkLabel(
@@ -23,7 +61,7 @@ class GenerateTab(ctk.CTkFrame):
             text="Job Description",
             font=ctk.CTkFont(size=15, weight="bold"),
             anchor="w",
-        ).pack(fill="x", padx=15, pady=(15, 5))
+        ).pack(fill="x", padx=15, pady=(8, 4))
 
         self._jd_textbox = ctk.CTkTextbox(self, height=180)
         self._jd_textbox.pack(fill="both", expand=True, padx=15, pady=(0, 10))
@@ -32,7 +70,6 @@ class GenerateTab(ctk.CTkFrame):
         opts_frame = ctk.CTkFrame(self, fg_color="transparent")
         opts_frame.pack(fill="x", padx=15, pady=(0, 10))
 
-        # Document types
         ctk.CTkLabel(opts_frame, text="Documents:").pack(side="left", padx=(0, 5))
         self._resume_var = ctk.BooleanVar(value=True)
         ctk.CTkCheckBox(
@@ -44,7 +81,6 @@ class GenerateTab(ctk.CTkFrame):
             opts_frame, text="Cover Letter", variable=self._cover_var
         ).pack(side="left", padx=(0, 20))
 
-        # Formats
         ctk.CTkLabel(opts_frame, text="Formats:").pack(side="left", padx=(0, 5))
         self._docx_var = ctk.BooleanVar(value=True)
         ctk.CTkCheckBox(
@@ -88,10 +124,73 @@ class GenerateTab(ctk.CTkFrame):
         self._log = StatusLog(self, height=120)
         self._log.pack(fill="both", expand=True, padx=15, pady=(0, 15))
 
+    # --- Public ---
+
     def set_job_description(self, text: str):
         """Load a job description (e.g. from history re-run)."""
         self._jd_textbox.delete("1.0", "end")
         self._jd_textbox.insert("1.0", text)
+
+    # --- LinkedIn fetch ---
+
+    def _on_fetch(self):
+        if self._fetching or self._generating:
+            return
+
+        url = self._url_var.get().strip()
+        if not url:
+            self._set_fetch_status("Enter a LinkedIn job URL first.", "orange")
+            return
+
+        self._fetching = True
+        self._fetch_btn.configure(state="disabled")
+        self._generate_btn.configure(state="disabled")
+        self._set_fetch_status("Fetching...", "gray")
+
+        threading.Thread(
+            target=self._run_fetch,
+            args=(url,),
+            daemon=True,
+        ).start()
+
+    def _run_fetch(self, url: str):
+        try:
+            job_data = fetch_linkedin_job(url, on_status=self._fetch_status_threadsafe)
+            text = format_for_textbox(job_data)
+
+            title = job_data.get("job_title", "")
+            company = job_data.get("company", "")
+            label = f"{title} at {company}" if title and company else (title or company or "done")
+
+            self.after(0, lambda: self._on_fetch_success(text, label))
+        except Exception as e:
+            msg = str(e)
+            self.after(0, lambda: self._on_fetch_error(msg))
+
+    def _fetch_status_threadsafe(self, msg: str):
+        self.after(0, lambda: self._set_fetch_status(msg, "gray"))
+
+    def _on_fetch_success(self, text: str, label: str):
+        self.set_job_description(text)
+        self._set_fetch_status(f"Fetched: {label}", "green")
+        self._fetch_done()
+
+    def _on_fetch_error(self, msg: str):
+        # Show first line in the status label; full detail in the log
+        first_line = msg.splitlines()[0]
+        self._set_fetch_status(f"Error: {first_line}", "#ee4444")
+        self._log.append(f"LinkedIn fetch error: {msg}")
+        self._fetch_done()
+
+    def _fetch_done(self):
+        self._fetching = False
+        self._fetch_btn.configure(state="normal")
+        self._generate_btn.configure(state="normal")
+
+    def _set_fetch_status(self, msg: str, color: str):
+        self._fetch_status.configure(text=msg, text_color=color)
+
+    # --- Options ---
 
     def _get_options(self) -> GenerationOptions:
         return GenerationOptions(
@@ -102,11 +201,12 @@ class GenerateTab(ctk.CTkFrame):
             format_txt=self._txt_var.get(),
         )
 
+    # --- Validation ---
+
     def _validate(self) -> str | None:
-        """Return an error message string, or None if valid."""
         jd = self._jd_textbox.get("1.0", "end").strip()
         if not jd:
-            return "Please paste a job description."
+            return "Please paste a job description or fetch one from a LinkedIn URL."
 
         opts = self._get_options()
         if not opts.generate_resume and not opts.generate_cover_letter:
@@ -126,8 +226,10 @@ class GenerateTab(ctk.CTkFrame):
 
         return None
 
+    # --- Generation ---
+
     def _on_generate(self):
-        if self._generating:
+        if self._generating or self._fetching:
             return
 
         error = self._validate()
@@ -137,6 +239,7 @@ class GenerateTab(ctk.CTkFrame):
 
         self._generating = True
         self._generate_btn.configure(state="disabled")
+        self._fetch_btn.configure(state="disabled")
         self._log.clear()
         self._progress.pack(side="left", fill="x", expand=True, padx=(15, 0))
         self._progress.start()
@@ -145,15 +248,14 @@ class GenerateTab(ctk.CTkFrame):
         jd = self._jd_textbox.get("1.0", "end").strip()
         options = self._get_options()
 
-        thread = threading.Thread(
+        threading.Thread(
             target=self._run_generation,
             args=(jd, options, config),
             daemon=True,
-        )
-        thread.start()
+        ).start()
 
     def _status(self, msg: str):
-        """Thread-safe status update."""
+        """Thread-safe status update to the log."""
         self.after(0, lambda: self._log.append(msg))
 
     def _run_generation(self, jd, options, config):
@@ -175,7 +277,6 @@ class GenerateTab(ctk.CTkFrame):
                 on_status=self._status,
             )
 
-            # Save to history
             entry = create_history_entry(
                 job_title=data.get("job_title", "Role"),
                 company=data.get("company", "Company"),
@@ -196,5 +297,6 @@ class GenerateTab(ctk.CTkFrame):
     def _generation_done(self):
         self._generating = False
         self._generate_btn.configure(state="normal")
+        self._fetch_btn.configure(state="normal")
         self._progress.stop()
         self._progress.pack_forget()
